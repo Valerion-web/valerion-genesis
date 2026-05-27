@@ -1,3 +1,5 @@
+import logo from "@/assets/logo.png";
+
 const LEFT_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Our Story", href: "#story" },
@@ -15,7 +17,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="navbar-glass border-b border-gold/25">
-        <nav className="max-w-7xl mx-auto px-6 lg:px-12 h-20 grid grid-cols-[1fr_auto_1fr] items-center gap-8">
+        <nav className="max-w-7xl mx-auto px-6 lg:px-12 h-24 grid grid-cols-[1fr_auto_1fr] items-center gap-8">
           {/* Left links */}
           <ul className="hidden lg:flex items-center gap-9 justify-self-start">
             {LEFT_LINKS.map((l) => (
@@ -32,12 +34,20 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Center: brand */}
+          {/* Center: logo + brand */}
           <a
             href="#home"
-            className="font-serif text-gold animate-glow-pulse text-lg sm:text-2xl lg:text-[1.75rem] tracking-wide-luxe whitespace-nowrap justify-self-center"
+            className="flex flex-col items-center gap-1.5 justify-self-center animate-fade-in"
           >
-            HOUSE OF VALERION
+            <img
+              src={logo}
+              alt="House of Valerion"
+              className="h-7 w-auto"
+              style={{ filter: "drop-shadow(0 0 6px rgb(212 175 55 / 0.5))" }}
+            />
+            <span className="font-serif text-gold animate-glow-pulse text-base sm:text-xl lg:text-[1.65rem] tracking-wide-luxe whitespace-nowrap">
+              HOUSE OF VALERION
+            </span>
           </a>
 
           {/* Right links */}
