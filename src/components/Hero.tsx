@@ -25,40 +25,37 @@ export function Hero() {
           style={{ animationDelay: "-8s" }}
         />
 
-        {/* Soft navy/white wash so text is readable */}
+        {/* Rich deep-navy cinematic overlay (no grey wash) */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, oklch(0.45 0.08 250 / 0.55) 0%, oklch(0.50 0.07 250 / 0.35) 40%, oklch(0.55 0.06 250 / 0.55) 100%)",
+              "linear-gradient(180deg, rgb(7 20 38 / 0.88) 0%, rgb(7 20 38 / 0.72) 45%, rgb(7 20 38 / 0.92) 100%)",
           }}
         />
 
-        {/* Cinematic light sweep (animated) */}
-        <div
-          className="pointer-events-none absolute -top-1/4 left-1/2 -translate-x-1/2 w-[140%] h-[80%] animate-light-sweep"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, oklch(0.92 0.14 90 / 0.35), transparent 60%)",
-          }}
-        />
-
-        {/* Fabric shimmer band slowly sweeping across */}
-        <div
-          className="pointer-events-none absolute inset-y-0 -left-1/3 w-2/3 animate-shimmer-sweep"
-          style={{
-            background:
-              "linear-gradient(115deg, transparent 35%, oklch(1 0 0 / 0.18) 50%, transparent 65%)",
-            mixBlendMode: "screen",
-          }}
-        />
-
-        {/* Vignette */}
+        {/* Gold lighting gradient blend */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 90% 80% at 50% 45%, transparent 40%, oklch(0.30 0.08 255 / 0.55) 100%)",
+              "radial-gradient(ellipse 70% 55% at 50% 35%, rgb(212 175 55 / 0.22), transparent 65%), radial-gradient(ellipse 50% 40% at 80% 80%, rgb(212 175 55 / 0.12), transparent 70%)",
+          }}
+        />
+
+        {/* Cinematic light sweep */}
+        <div
+          className="pointer-events-none absolute -top-1/4 left-1/2 -translate-x-1/2 w-[140%] h-[80%] animate-light-sweep"
+          style={{
+            background: "radial-gradient(ellipse at center, rgb(240 206 90 / 0.30), transparent 60%)",
+          }}
+        />
+
+        {/* Vignette into navy */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 95% 85% at 50% 45%, transparent 45%, #071426 100%)",
           }}
         />
       </div>
@@ -84,25 +81,29 @@ export function Hero() {
         />
 
         <p
-          className="mt-10 italic font-serif text-lg sm:text-2xl text-white/90 animate-fade-up max-w-2xl"
+          className="mt-10 italic font-serif text-lg sm:text-2xl text-ivory animate-fade-up max-w-2xl"
           style={{ animationDelay: "0.8s" }}
         >
           “Crafted for the modern royalty.”
         </p>
 
-        <div className="mt-14 animate-fade-up" style={{ animationDelay: "1s" }}>
+        <div className="mt-14 flex flex-col sm:flex-row gap-5 animate-fade-up" style={{ animationDelay: "1s" }}>
           <a
             href="#story"
-            className="group relative inline-flex items-center gap-3 px-12 py-4 overflow-hidden bg-gradient-gold text-navy-deep text-xs tracking-luxe uppercase font-medium shadow-gold transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_60px_oklch(0.88_0.16_92/0.6)]"
+            className="group relative inline-flex items-center justify-center gap-3 px-12 py-4 overflow-hidden bg-gradient-gold text-navy-deep text-xs tracking-luxe uppercase font-semibold shadow-gold transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_60px_rgb(240_206_90/0.6)]"
           >
             <span className="relative z-10">Enter the World of Valerion</span>
             <span className="relative z-10 transition-transform duration-500 group-hover:translate-x-1">→</span>
             <span
               className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
-              style={{
-                background: "linear-gradient(90deg, transparent, oklch(1 0 0 / 0.5), transparent)",
-              }}
+              style={{ background: "linear-gradient(90deg, transparent, rgb(255 255 255 / 0.5), transparent)" }}
             />
+          </a>
+          <a
+            href="#collections"
+            className="group relative inline-flex items-center justify-center gap-3 px-12 py-4 border border-gold text-ivory text-xs tracking-luxe uppercase font-medium bg-transparent transition-all duration-500 hover:text-gold hover:shadow-[0_0_30px_rgb(212_175_55/0.4)]"
+          >
+            <span>Discover Collections</span>
           </a>
         </div>
       </div>
