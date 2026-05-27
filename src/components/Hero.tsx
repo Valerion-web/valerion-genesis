@@ -62,13 +62,6 @@ export function Hero() {
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 min-h-[calc(100vh-6rem)] py-16">
-        <div className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          <p className="text-[11px] sm:text-xs tracking-luxe uppercase text-gold mb-8">
-            ⸻ &nbsp; Maison Établie MMXXVI &nbsp; ⸻
-          </p>
-        </div>
-
-        <h1
           className="font-serif uppercase text-[18vw] sm:text-[12vw] lg:text-[10rem] leading-[0.95] text-gradient-gold animate-fade-up tracking-wide-luxe"
           style={{ animationDelay: "0.4s" }}
         >
