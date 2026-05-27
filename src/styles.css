@@ -54,17 +54,18 @@
   :root {
     --radius: 0.25rem;
 
-    --onyx: oklch(0.08 0.012 260);
-    --navy-deep: oklch(0.14 0.045 265);
-    --navy: oklch(0.22 0.07 265);
-    --gold: oklch(0.78 0.14 86);
-    --gold-bright: oklch(0.88 0.16 92);
-    --gold-deep: oklch(0.58 0.12 78);
+    --onyx: oklch(0.10 0.035 265);
+    --navy-deep: oklch(0.16 0.06 265);
+    --navy: oklch(0.24 0.085 265);
+    --navy-light: oklch(0.32 0.095 265);
+    --gold: oklch(0.80 0.145 86);
+    --gold-bright: oklch(0.90 0.16 92);
+    --gold-deep: oklch(0.60 0.13 78);
     --ivory: oklch(0.97 0.012 90);
 
-    --background: var(--onyx);
+    --background: var(--navy-deep);
     --foreground: var(--ivory);
-    --card: oklch(0.11 0.025 262);
+    --card: oklch(0.18 0.06 265);
     --card-foreground: var(--ivory);
     --popover: var(--card);
     --popover-foreground: var(--ivory);
@@ -82,11 +83,11 @@
     --input: oklch(0.78 0.14 86 / 0.25);
     --ring: var(--gold);
 
-    --gradient-gold: linear-gradient(135deg, oklch(0.88 0.16 92) 0%, oklch(0.78 0.14 86) 45%, oklch(0.58 0.12 78) 100%);
-    --gradient-navy: radial-gradient(ellipse at top, oklch(0.22 0.07 265) 0%, oklch(0.08 0.012 260) 70%);
-    --gradient-cinematic: linear-gradient(180deg, oklch(0.08 0.012 260) 0%, oklch(0.14 0.045 265) 50%, oklch(0.08 0.012 260) 100%);
-    --gradient-spotlight: radial-gradient(ellipse 60% 80% at 50% 50%, oklch(0.78 0.14 86 / 0.18), transparent 70%);
-    --gradient-text-gold: linear-gradient(180deg, oklch(0.95 0.1 92) 0%, oklch(0.78 0.14 86) 50%, oklch(0.55 0.11 75) 100%);
+    --gradient-gold: linear-gradient(135deg, oklch(0.90 0.16 92) 0%, oklch(0.80 0.145 86) 45%, oklch(0.60 0.13 78) 100%);
+    --gradient-navy: radial-gradient(ellipse at top, oklch(0.28 0.09 265) 0%, oklch(0.12 0.045 265) 70%);
+    --gradient-cinematic: linear-gradient(180deg, oklch(0.12 0.045 265) 0%, oklch(0.18 0.065 265) 50%, oklch(0.10 0.035 265) 100%);
+    --gradient-spotlight: radial-gradient(ellipse 60% 80% at 50% 50%, oklch(0.80 0.145 86 / 0.18), transparent 70%);
+    --gradient-text-gold: linear-gradient(180deg, oklch(0.96 0.10 92) 0%, oklch(0.80 0.145 86) 50%, oklch(0.58 0.12 75) 100%);
 
     --shadow-gold: 0 0 40px oklch(0.78 0.14 86 / 0.35), 0 0 80px oklch(0.78 0.14 86 / 0.15);
     --shadow-deep: 0 30px 80px -20px oklch(0 0 0 / 0.8);
@@ -137,10 +138,10 @@
   .shadow-card { box-shadow: var(--shadow-card); }
 
   .glass {
-    background: oklch(0.11 0.025 262 / 0.45);
+    background: oklch(0.16 0.06 265 / 0.55);
     backdrop-filter: blur(18px) saturate(140%);
     -webkit-backdrop-filter: blur(18px) saturate(140%);
-    border: 1px solid oklch(0.78 0.14 86 / 0.15);
+    border: 1px solid oklch(0.80 0.145 86 / 0.18);
   }
 
   .gold-border {
@@ -149,6 +150,9 @@
 
   .tracking-luxe { letter-spacing: 0.32em; }
   .tracking-wide-luxe { letter-spacing: 0.18em; }
+
+  .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
 }
 
 @keyframes glow-pulse {
