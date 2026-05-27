@@ -62,32 +62,26 @@ export function Hero() {
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 min-h-[calc(100vh-6rem)] py-16">
-        <div className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          <p className="text-[11px] sm:text-xs tracking-luxe uppercase text-gold mb-8">
-            ⸻ &nbsp; Maison Établie MMXXVI &nbsp; ⸻
-          </p>
-        </div>
-
         <h1
           className="font-serif uppercase text-[18vw] sm:text-[12vw] lg:text-[10rem] leading-[0.95] text-gradient-gold animate-fade-up tracking-wide-luxe"
-          style={{ animationDelay: "0.4s" }}
+          style={{ animationDelay: "0.2s" }}
         >
           Coming Soon
         </h1>
 
         <div
           className="h-px w-32 bg-gradient-gold mt-10 animate-fade-up"
-          style={{ animationDelay: "0.6s" }}
+          style={{ animationDelay: "0.4s" }}
         />
 
         <p
           className="mt-10 italic font-serif text-lg sm:text-2xl text-ivory animate-fade-up max-w-2xl"
-          style={{ animationDelay: "0.8s" }}
+          style={{ animationDelay: "0.6s" }}
         >
-          “Crafted for the modern royalty.”
+          "Crafted for the modern royalty."
         </p>
 
-        <div className="mt-14 flex flex-col sm:flex-row gap-5 animate-fade-up" style={{ animationDelay: "1s" }}>
+        <div className="mt-14 flex flex-col sm:flex-row gap-5 animate-fade-up" style={{ animationDelay: "0.8s" }}>
           <a
             href="#story"
             className="group relative inline-flex items-center justify-center gap-3 px-12 py-4 overflow-hidden bg-gradient-gold text-navy-deep text-xs tracking-luxe uppercase font-semibold shadow-gold transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_60px_rgb(240_206_90/0.6)]"
