@@ -34,12 +34,12 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@address.com"
-              className="w-full bg-onyx/60 border border-gold/30 px-6 py-4 text-ivory placeholder:text-ivory/30 focus:outline-none focus:border-gold transition-all duration-500 focus:shadow-[0_0_30px_oklch(0.78_0.14_86/0.35)]"
+              className="w-full bg-white/80 border border-gold/40 px-6 py-4 text-navy-deep placeholder:text-navy-deep/40 focus:outline-none focus:border-gold transition-all duration-500 focus:shadow-[0_0_30px_oklch(0.78_0.14_86/0.35)]"
             />
           </div>
           <button
             type="submit"
-            className="group relative px-10 py-4 bg-gradient-gold text-onyx text-xs tracking-luxe uppercase font-medium overflow-hidden transition-transform duration-500 hover:scale-[1.03]"
+            className="group relative px-10 py-4 bg-gradient-gold text-navy-deep text-xs tracking-luxe uppercase font-medium overflow-hidden transition-transform duration-500 hover:scale-[1.03]"
           >
             <span className="relative z-10">{done ? "✓ Subscribed" : "Subscribe"}</span>
             <span

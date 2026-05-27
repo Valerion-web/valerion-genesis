@@ -26,9 +26,9 @@ export function Footer() {
                 key={i}
                 href="#"
                 aria-label="social"
-                className="group w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center transition-all duration-500 hover:bg-gradient-gold hover:border-transparent hover:shadow-gold hover:-translate-y-1"
+                className="group w-12 h-12 rounded-full border border-gold/50 flex items-center justify-center transition-all duration-500 hover:bg-gradient-gold hover:border-transparent hover:shadow-gold hover:-translate-y-1"
               >
-                <Icon className="w-4 h-4 text-gold group-hover:text-onyx transition-colors duration-500" />
+                <Icon className="w-4 h-4 text-gold group-hover:text-navy-deep transition-colors duration-500" />
               </a>
             ))}
           </div>
