@@ -1,29 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Story } from "@/components/Story";
+import { Collections } from "@/components/Collections";
+import { Newsletter } from "@/components/Newsletter";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "House of Valerion — Coming Soon" },
+      {
+        name: "description",
+        content:
+          "House of Valerion — a new maison of luxury menswear. Crafted for the modern royalty. Coming soon.",
+      },
+      { property: "og:title", content: "House of Valerion — Coming Soon" },
+      {
+        property: "og:description",
+        content: "A new maison of luxury menswear. Crafted for the modern royalty.",
+      },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="bg-onyx text-ivory min-h-screen overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <Story />
+      <Collections />
+      <Newsletter />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
