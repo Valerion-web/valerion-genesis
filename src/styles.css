@@ -138,10 +138,10 @@
   .shadow-card { box-shadow: var(--shadow-card); }
 
   .glass {
-    background: oklch(0.11 0.025 262 / 0.45);
+    background: oklch(0.16 0.06 265 / 0.55);
     backdrop-filter: blur(18px) saturate(140%);
     -webkit-backdrop-filter: blur(18px) saturate(140%);
-    border: 1px solid oklch(0.78 0.14 86 / 0.15);
+    border: 1px solid oklch(0.80 0.145 86 / 0.18);
   }
 
   .gold-border {
