@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap",
       },
     ],
   }),
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="bg-onyx text-ivory min-h-screen overflow-x-hidden">
+    <main className="bg-background text-foreground min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
       <Story />
