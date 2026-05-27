@@ -34,7 +34,7 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@address.com"
-              className="w-full bg-white/80 border border-gold/40 px-6 py-4 text-navy-deep placeholder:text-navy-deep/40 focus:outline-none focus:border-gold transition-all duration-500 focus:shadow-[0_0_30px_oklch(0.78_0.14_86/0.35)]"
+              className="w-full bg-navy/40 border border-gold/40 px-6 py-4 text-ivory placeholder:text-ivory/40 focus:outline-none focus:border-gold transition-all duration-500 focus:shadow-[0_0_30px_rgb(212_175_55/0.35)]"
             />
           </div>
           <button
