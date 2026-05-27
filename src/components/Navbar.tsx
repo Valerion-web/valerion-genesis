@@ -36,19 +36,27 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Center: logo + brand */}
-          <a
-            href="#home"
-            className="flex flex-col items-center gap-1.5 justify-self-center animate-fade-in"
-          >
-            <img
-              src={logo}
-              alt="House of Valerion"
-              className="h-7 w-auto"
-              style={{ filter: "drop-shadow(0 0 6px rgb(212 175 55 / 0.5))" }}
-            />
-            <span className="font-serif text-gold animate-glow-pulse text-base sm:text-xl lg:text-[1.65rem] tracking-wide-luxe whitespace-nowrap">
-              HOUSE OF VALERION
+          {/* Center: logo */}
+          <a href="#home" className="flex items-center justify-self-center animate-fade-in">
+            <span className="relative flex items-center justify-center">
+              <span
+                aria-hidden
+                className="absolute -inset-2 lg:-inset-3 rounded-full blur-3xl -z-10"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at center, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.06) 30%, transparent 60%)",
+                }}
+              />
+              <img
+                src={logo}
+                alt="House of Valerion"
+                className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
+                style={{
+                  filter:
+                    "brightness(1.12) contrast(1.08) saturate(1.12) drop-shadow(0 8px 18px rgba(17,24,39,0.45)) drop-shadow(0 0 12px rgba(212,175,55,0.42))",
+                  imageRendering: "auto",
+                }}
+              />
             </span>
           </a>
 

@@ -1,5 +1,6 @@
 import heroModel from "@/assets/hero-model.jpg";
 import mannequin from "@/assets/mannequin-silhouette.jpg";
+import logo from "@/assets/logo.png";
 
 export function Hero() {
   return (
@@ -64,27 +65,54 @@ export function Hero() {
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 min-h-[calc(100vh-6rem)] py-16">
+        <div className="flex flex-col items-center gap-3 mb-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <div className="relative flex items-center justify-center">
+            <span
+              aria-hidden
+              className="absolute -inset-3 rounded-full blur-3xl -z-10 lg:-inset-4"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.06) 30%, transparent 60%)",
+              }}
+            />
+            <img
+              src={logo}
+              alt="House of Valerion"
+              className="h-20 sm:h-24 lg:h-28 w-auto object-contain"
+              style={{
+                filter:
+                  "brightness(1.14) contrast(1.06) saturate(1.08) drop-shadow(0 14px 28px rgba(7,20,38,0.5)) drop-shadow(0 0 18px rgba(212,175,55,0.36))",
+                imageRendering: "auto",
+              }}
+            />
+          </div>
+
+          <span className="font-serif text-gold text-sm sm:text-base lg:text-lg tracking-wide-luxe whitespace-nowrap">
+            HOUSE OF VALERION
+          </span>
+        </div>
+
         <h1
-          className="font-serif uppercase text-[18vw] sm:text-[12vw] lg:text-[10rem] leading-[0.95] text-gradient-gold animate-fade-up tracking-wide-luxe"
+          className="font-serif uppercase text-[14.5vw] sm:text-[10.5vw] lg:text-[8.5rem] leading-[0.96] text-gradient-gold animate-fade-up tracking-wide-luxe max-w-[90vw]"
           style={{ animationDelay: "0.2s" }}
         >
           Coming Soon
         </h1>
 
         <div
-          className="h-px w-32 bg-gradient-gold mt-10 animate-fade-up"
+          className="h-px w-32 bg-gradient-gold mt-8 animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         />
 
         <p
-          className="mt-10 italic font-serif text-lg sm:text-2xl text-ivory animate-fade-up max-w-2xl"
+          className="mt-8 italic font-serif text-lg sm:text-2xl text-ivory animate-fade-up max-w-2xl"
           style={{ animationDelay: "0.6s" }}
         >
           "Crafted for the modern royalty."
         </p>
 
         <div
-          className="mt-14 flex flex-col sm:flex-row gap-5 animate-fade-up"
+          className="mt-12 flex flex-col sm:flex-row gap-5 animate-fade-up"
           style={{ animationDelay: "0.8s" }}
         >
           <a
