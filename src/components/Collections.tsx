@@ -44,10 +44,10 @@ export function Collections() {
                 />
 
                 <div className="relative h-full flex flex-col justify-end p-5">
-                  <p className="text-[9px] tracking-luxe uppercase text-gold/70">{c.subtitle}</p>
-                  <h3 className="mt-1.5 font-serif text-xl lg:text-2xl text-ivory leading-tight">{c.title}</h3>
+                  <p className="text-[9px] tracking-luxe uppercase text-gold">{c.subtitle}</p>
+                  <h3 className="mt-1.5 font-serif text-xl lg:text-2xl text-white leading-tight">{c.title}</h3>
                   <div className="h-px w-8 bg-gradient-gold my-3 transition-all duration-500 group-hover:w-16" />
-                  <button className="self-start group/btn relative px-4 py-2 border border-gold/60 text-[9px] tracking-luxe uppercase text-gold hover:text-onyx transition-colors duration-500 overflow-hidden">
+                  <button className="self-start group/btn relative px-4 py-2 border border-gold/70 text-[9px] tracking-luxe uppercase text-gold hover:text-navy-deep transition-colors duration-500 overflow-hidden">
                     <span className="relative z-10">Discover</span>
                     <span className="absolute inset-0 bg-gradient-gold translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500" />
                   </button>

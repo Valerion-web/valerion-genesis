@@ -14,7 +14,7 @@ export function Story() {
               loading="lazy"
               className="w-full aspect-[4/5] object-cover transition-transform duration-[2000ms] hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-onyx/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/40 via-transparent to-transparent" />
           </div>
           <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-gold/40 -z-10" />
         </div>

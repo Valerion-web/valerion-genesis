@@ -24,8 +24,8 @@ export function Contact() {
               key={label}
               className="group relative glass gold-border p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-gold"
             >
-              <div className="mx-auto w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-gradient-gold group-hover:border-transparent">
-                <Icon className="w-5 h-5 text-gold group-hover:text-onyx transition-colors duration-500" />
+              <div className="mx-auto w-14 h-14 rounded-full border border-gold/50 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-gradient-gold group-hover:border-transparent">
+                <Icon className="w-5 h-5 text-gold group-hover:text-navy-deep transition-colors duration-500" />
               </div>
               <p className="text-[10px] tracking-luxe uppercase text-gold/70 mb-2">{label}</p>
               <p className="font-serif text-ivory text-sm">{value}</p>
