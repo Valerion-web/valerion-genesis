@@ -47,7 +47,8 @@ export function Hero() {
         <div
           className="pointer-events-none absolute -top-1/4 left-1/2 -translate-x-1/2 w-[140%] h-[80%] animate-light-sweep"
           style={{
-            background: "radial-gradient(ellipse at center, rgb(240 206 90 / 0.30), transparent 60%)",
+            background:
+              "radial-gradient(ellipse at center, rgb(240 206 90 / 0.30), transparent 60%)",
           }}
         />
 
@@ -55,7 +56,8 @@ export function Hero() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse 95% 85% at 50% 45%, transparent 45%, #071426 100%)",
+            background:
+              "radial-gradient(ellipse 95% 85% at 50% 45%, transparent 45%, #071426 100%)",
           }}
         />
       </div>
@@ -81,16 +83,24 @@ export function Hero() {
           "Crafted for the modern royalty."
         </p>
 
-        <div className="mt-14 flex flex-col sm:flex-row gap-5 animate-fade-up" style={{ animationDelay: "0.8s" }}>
+        <div
+          className="mt-14 flex flex-col sm:flex-row gap-5 animate-fade-up"
+          style={{ animationDelay: "0.8s" }}
+        >
           <a
             href="#story"
             className="group relative inline-flex items-center justify-center gap-3 px-12 py-4 overflow-hidden bg-gradient-gold text-navy-deep text-xs tracking-luxe uppercase font-semibold shadow-gold transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_60px_rgb(240_206_90/0.6)]"
           >
             <span className="relative z-10">Enter the World of Valerion</span>
-            <span className="relative z-10 transition-transform duration-500 group-hover:translate-x-1">→</span>
+            <span className="relative z-10 transition-transform duration-500 group-hover:translate-x-1">
+              →
+            </span>
             <span
               className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
-              style={{ background: "linear-gradient(90deg, transparent, rgb(255 255 255 / 0.5), transparent)" }}
+              style={{
+                background:
+                  "linear-gradient(90deg, transparent, rgb(255 255 255 / 0.5), transparent)",
+              }}
             />
           </a>
           <a

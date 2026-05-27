@@ -22,7 +22,9 @@ export function Navbar() {
           <ul className="hidden lg:flex items-center gap-9 justify-self-start">
             {LEFT_LINKS.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className={linkClass}>{l.label}</a>
+                <a href={l.href} className={linkClass}>
+                  {l.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -54,7 +56,9 @@ export function Navbar() {
           <ul className="hidden lg:flex items-center gap-9 justify-self-end">
             {RIGHT_LINKS.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className={linkClass}>{l.label}</a>
+                <a href={l.href} className={linkClass}>
+                  {l.label}
+                </a>
               </li>
             ))}
           </ul>

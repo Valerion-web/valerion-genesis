@@ -8,7 +8,10 @@ export function Newsletter() {
     <section className="relative py-32 px-6 overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none opacity-40"
-        style={{ background: "radial-gradient(ellipse at center, oklch(0.78 0.14 86 / 0.18), transparent 60%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse at center, oklch(0.78 0.14 86 / 0.18), transparent 60%)",
+        }}
       />
       <div className="relative max-w-3xl mx-auto text-center">
         <p className="text-xs tracking-luxe uppercase text-gold mb-4">— Private Circle</p>
@@ -16,8 +19,8 @@ export function Newsletter() {
           Be the First to Know
         </h2>
         <p className="mt-6 text-ivory/70 font-light max-w-xl mx-auto">
-          Receive the first whisper of our debut campaign, atelier openings, and invitations reserved for the
-          Valerion circle.
+          Receive the first whisper of our debut campaign, atelier openings, and invitations
+          reserved for the Valerion circle.
         </p>
 
         <form
@@ -44,7 +47,9 @@ export function Newsletter() {
             <span className="relative z-10">{done ? "✓ Subscribed" : "Subscribe"}</span>
             <span
               className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
-              style={{ background: "linear-gradient(90deg, transparent, oklch(1 0 0 / 0.4), transparent)" }}
+              style={{
+                background: "linear-gradient(90deg, transparent, oklch(1 0 0 / 0.4), transparent)",
+              }}
             />
           </button>
         </form>

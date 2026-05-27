@@ -28,8 +28,8 @@ export function Story() {
 
           <p className="text-ivory/80 text-base leading-relaxed font-light">
             In a world filled with trends that fade overnight,
-            <span className="text-gold"> HOUSE OF VALERION</span> was born to create
-            something timeless.
+            <span className="text-gold"> HOUSE OF VALERION</span> was born to create something
+            timeless.
           </p>
 
           <div className="mt-5 space-y-0.5 font-serif italic text-ivory/90 text-lg">
@@ -39,15 +39,15 @@ export function Story() {
           </div>
 
           <p className="mt-6 text-ivory/70 leading-relaxed font-light text-sm">
-            HOUSE OF VALERION began with a vision — to build a brand for people who carry
-            ambition in their eyes, confidence in their presence, and greatness in their mindset.
+            HOUSE OF VALERION began with a vision — to build a brand for people who carry ambition
+            in their eyes, confidence in their presence, and greatness in their mindset.
           </p>
 
           <div className="h-px w-12 bg-gradient-gold my-6 opacity-60" />
 
           <p className="text-ivory/70 leading-relaxed font-light text-sm">
-            The name <span className="text-gold font-serif">VALERION</span> represents
-            strength, legacy, elegance, and power.
+            The name <span className="text-gold font-serif">VALERION</span> represents strength,
+            legacy, elegance, and power.
           </p>
         </div>
       </div>

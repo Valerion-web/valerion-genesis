@@ -7,7 +7,9 @@ export function Footer() {
     <footer className="relative pt-24 pb-10 px-6 border-t border-gold/15 overflow-hidden">
       <div
         className="absolute inset-x-0 top-0 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, oklch(0.78 0.14 86 / 0.8), transparent)" }}
+        style={{
+          background: "linear-gradient(90deg, transparent, oklch(0.78 0.14 86 / 0.8), transparent)",
+        }}
       />
       <div className="max-w-7xl mx-auto text-center">
         <a
