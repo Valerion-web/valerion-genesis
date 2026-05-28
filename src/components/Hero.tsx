@@ -100,12 +100,6 @@ export function Hero() {
           Crafted For Modern Royalty
         </p>
 
-        <p
-          className="mt-5 text-[10px] sm:text-xs text-ivory/70 uppercase tracking-luxe animate-fade-up"
-          style={{ animationDelay: "0.75s" }}
-        >
-          Luxury Streetwear &nbsp;&bull;&nbsp; Timeless Identity &nbsp;&bull;&nbsp; Modern Power
-        </p>
 
         <div
           className="mt-12 flex flex-col sm:flex-row gap-5 animate-fade-up"
