@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "@/assets/logo.png";
 import heroVideo from "../../public/videos/hero.mp4.asset.json";
 
 export function Hero() {
@@ -81,55 +80,32 @@ export function Hero() {
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 min-h-[calc(100vh-6rem)] py-16">
-        <div
-          className="flex flex-col items-center gap-4 mb-6 animate-fade-up"
-          style={{ animationDelay: "0.1s" }}
-        >
-          <div className="relative flex items-center justify-center">
-            <span
-              aria-hidden
-              className="absolute -inset-3 rounded-full blur-3xl -z-10 lg:-inset-4"
-              style={{
-                background:
-                  "radial-gradient(ellipse at center, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.06) 30%, transparent 60%)",
-              }}
-            />
-            <img
-              src={logo}
-              alt="House of Valerion"
-              className="h-16 sm:h-20 lg:h-24 w-auto object-contain"
-              style={{
-                filter:
-                  "brightness(1.14) contrast(1.06) saturate(1.08) drop-shadow(0 14px 28px rgba(7,20,38,0.5)) drop-shadow(0 0 18px rgba(212,175,55,0.36))",
-              }}
-            />
-          </div>
-        </div>
-
         <h1
-          className="font-serif uppercase text-[11vw] sm:text-[8.5vw] lg:text-[6.5rem] leading-[0.96] text-gradient-gold animate-fade-up tracking-wide-luxe max-w-[92vw]"
+          className="font-serif uppercase text-[10vw] sm:text-[7.5vw] lg:text-[5.5rem] leading-[0.96] text-gradient-gold animate-fade-up tracking-wide-luxe max-w-[92vw]"
           style={{ animationDelay: "0.25s" }}
         >
           House of Valerion
         </h1>
 
-        <div
-          className="h-px w-32 bg-gradient-gold mt-8 animate-fade-up"
+        <p
+          className="mt-6 font-serif uppercase text-[6vw] sm:text-[4.5vw] lg:text-[3.2rem] leading-[1] text-gradient-gold animate-fade-up tracking-wide-luxe"
           style={{ animationDelay: "0.45s" }}
-        />
+        >
+          Coming Soon
+        </p>
 
         <p
-          className="mt-8 font-serif italic text-lg sm:text-2xl lg:text-3xl text-ivory animate-fade-up max-w-3xl"
+          className="mt-5 font-serif italic text-sm sm:text-base lg:text-lg text-ivory animate-fade-up tracking-widest"
           style={{ animationDelay: "0.6s" }}
         >
-          Built For Those Who Refuse To Be Ordinary
+          Crafted For Modern Royalty
         </p>
 
         <p
           className="mt-5 text-[10px] sm:text-xs text-ivory/70 uppercase tracking-luxe animate-fade-up"
           style={{ animationDelay: "0.75s" }}
         >
-          Luxury Streetwear &nbsp;•&nbsp; Timeless Identity &nbsp;•&nbsp; Modern Power
+          Luxury Streetwear &nbsp;&bull;&nbsp; Timeless Identity &nbsp;&bull;&nbsp; Modern Power
         </p>
 
         <div
