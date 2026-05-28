@@ -26,7 +26,7 @@ export function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <video
           ref={videoRef}
-          src="/videos/hero.mp4"
+          src={heroVideo.url}
           autoPlay
           muted
           loop
