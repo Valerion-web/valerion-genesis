@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "@/assets/logo.png";
 import heroVideo from "../../public/videos/hero.mp4.asset.json";
 
 export function Hero() {
