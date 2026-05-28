@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import heroVideo from "../../public/videos/hero.mp4.asset.json";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -25,15 +24,15 @@ export function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <video
           ref={videoRef}
-          src={heroVideo.url}
+          src="/videos/hero.mp4"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
           onLoadedData={() => setLoaded(true)}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1800ms] ease-out ${
-            loaded ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          loaded ? "opacity-100" : "opacity-0"
           }`}
           style={{
             transform: `scale(${1.05 + Math.min(scrollY, 600) / 6000}) translateY(${scrollY * 0.25}px)`,
