@@ -117,28 +117,28 @@ export function Navbar() {
         <div className="absolute inset-0 bg-[rgba(7,20,38,0.92)] backdrop-blur-xl" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(212,175,55,0.14),transparent_32%),linear-gradient(180deg,rgba(15,27,52,0.92),rgba(4,9,19,0.98))]" />
 
-        <div className="relative z-10 min-h-screen px-8 py-8 flex items-center justify-center">
+        <div className="relative z-10 min-h-screen px-5 py-6 sm:px-8 sm:py-10 flex items-center justify-center">
           <div
-            className="w-full max-w-2xl rounded-3xl border border-gold/15 bg-navy-deep/95 p-8 shadow-[0_0_80px_rgba(0,0,0,0.48)]"
+            className="w-full max-w-3xl rounded-[2rem] border border-gold/15 bg-navy-deep/95 px-5 py-8 sm:px-8 sm:py-10 shadow-[0_0_80px_rgba(0,0,0,0.48)]"
             onClick={(event) => event.stopPropagation()}
           >
             <button
               type="button"
               onClick={() => setMenuOpen(false)}
-              className="absolute top-6 right-6 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gold/25 bg-navy-deep/80 text-gold transition hover:bg-navy/95 focus:outline-none"
+              className="absolute top-5 right-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/25 bg-navy-deep/80 text-gold transition duration-300 hover:bg-navy/95 focus:outline-none"
             >
               <span className="sr-only">Close menu</span>
-              <span className="absolute block h-px w-5 rotate-45 bg-gold" />
-              <span className="absolute block h-px w-5 -rotate-45 bg-gold" />
+              <span className="absolute block h-px w-4 rotate-45 bg-gold" />
+              <span className="absolute block h-px w-4 -rotate-45 bg-gold" />
             </button>
 
-            <div className="flex min-h-[calc(100vh-6rem)] flex-col items-center justify-center text-center gap-8">
+            <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center text-center gap-6 sm:gap-8">
               {MENU_LINKS.map((item, index) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="inline-block text-4xl sm:text-5xl uppercase tracking-[0.45em] text-ivory transition-transform duration-500 hover:text-gold hover:-translate-y-1"
+                  className="w-full max-w-xl text-3xl sm:text-4xl md:text-5xl uppercase tracking-[0.18em] text-ivory transition-transform duration-300 hover:text-gold hover:-translate-y-0.5"
                   style={{ animation: `fade-up 0.6s ease forwards`, animationDelay: `${index * 0.08 + 0.12}s`, opacity: 0 }}
                 >
                   {item.label}
