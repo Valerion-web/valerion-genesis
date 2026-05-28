@@ -1,71 +1,89 @@
-import heroModel from "@/assets/hero-model.jpg";
-import mannequin from "@/assets/mannequin-silhouette.jpg";
+import { useEffect, useRef, useState } from "react";
 import logo from "@/assets/logo.png";
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [loaded, setLoaded] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (v) {
+      v.play().catch(() => {});
+    }
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full overflow-hidden pt-24 bg-gradient-navy"
+      className="relative min-h-screen w-full overflow-hidden pt-24 bg-navy-deep"
     >
-      {/* Cinematic video-style background: layered ken-burns imagery + animated sheen */}
+      {/* Cinematic background video */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Primary fabric / studio background (slow zoom) */}
-        <img
-          src={heroModel}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 w-full h-full object-cover object-center animate-slow-zoom opacity-90"
-        />
-        {/* Secondary silhouette layer drifting */}
-        <img
-          src={mannequin}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 w-full h-full object-cover object-left opacity-30 mix-blend-luminosity animate-slow-zoom"
-          style={{ animationDelay: "-8s" }}
+        <video
+          ref={videoRef}
+          src="/videos/hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          onLoadedData={() => setLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1800ms] ease-out ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            transform: `scale(${1.05 + Math.min(scrollY, 600) / 6000}) translateY(${scrollY * 0.25}px)`,
+            willChange: "transform",
+          }}
         />
 
-        {/* Rich deep-navy cinematic overlay (no grey wash) */}
+        {/* Dark luxury overlay for readability */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgb(7 20 38 / 0.88) 0%, rgb(7 20 38 / 0.72) 45%, rgb(7 20 38 / 0.92) 100%)",
+              "linear-gradient(180deg, rgb(7 20 38 / 0.78) 0%, rgb(7 20 38 / 0.55) 45%, rgb(7 20 38 / 0.92) 100%)",
           }}
         />
 
-        {/* Gold lighting gradient blend */}
+        {/* Gold cinematic lighting */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 70% 55% at 50% 35%, rgb(212 175 55 / 0.22), transparent 65%), radial-gradient(ellipse 50% 40% at 80% 80%, rgb(212 175 55 / 0.12), transparent 70%)",
+              "radial-gradient(ellipse 70% 55% at 50% 35%, rgb(212 175 55 / 0.18), transparent 65%), radial-gradient(ellipse 50% 40% at 80% 80%, rgb(212 175 55 / 0.10), transparent 70%)",
           }}
         />
 
-        {/* Cinematic light sweep */}
+        {/* Light sweep */}
         <div
           className="pointer-events-none absolute -top-1/4 left-1/2 -translate-x-1/2 w-[140%] h-[80%] animate-light-sweep"
           style={{
             background:
-              "radial-gradient(ellipse at center, rgb(240 206 90 / 0.30), transparent 60%)",
+              "radial-gradient(ellipse at center, rgb(240 206 90 / 0.22), transparent 60%)",
           }}
         />
 
-        {/* Vignette into navy */}
+        {/* Vignette */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 95% 85% at 50% 45%, transparent 45%, #071426 100%)",
+              "radial-gradient(ellipse 95% 85% at 50% 45%, transparent 50%, #071426 100%)",
           }}
         />
       </div>
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 min-h-[calc(100vh-6rem)] py-16">
-        <div className="flex flex-col items-center gap-3 mb-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+        <div
+          className="flex flex-col items-center gap-4 mb-6 animate-fade-up"
+          style={{ animationDelay: "0.1s" }}
+        >
           <div className="relative flex items-center justify-center">
             <span
               aria-hidden
@@ -78,42 +96,44 @@ export function Hero() {
             <img
               src={logo}
               alt="House of Valerion"
-              className="h-20 sm:h-24 lg:h-28 w-auto object-contain"
+              className="h-16 sm:h-20 lg:h-24 w-auto object-contain"
               style={{
                 filter:
                   "brightness(1.14) contrast(1.06) saturate(1.08) drop-shadow(0 14px 28px rgba(7,20,38,0.5)) drop-shadow(0 0 18px rgba(212,175,55,0.36))",
-                imageRendering: "auto",
               }}
             />
           </div>
-
-          <span className="font-serif text-gold text-sm sm:text-base lg:text-lg tracking-wide-luxe whitespace-nowrap">
-            HOUSE OF VALERION
-          </span>
         </div>
 
         <h1
-          className="font-serif uppercase text-[14.5vw] sm:text-[10.5vw] lg:text-[8.5rem] leading-[0.96] text-gradient-gold animate-fade-up tracking-wide-luxe max-w-[90vw]"
-          style={{ animationDelay: "0.2s" }}
+          className="font-serif uppercase text-[11vw] sm:text-[8.5vw] lg:text-[6.5rem] leading-[0.96] text-gradient-gold animate-fade-up tracking-wide-luxe max-w-[92vw]"
+          style={{ animationDelay: "0.25s" }}
         >
-          Coming Soon
+          House of Valerion
         </h1>
 
         <div
           className="h-px w-32 bg-gradient-gold mt-8 animate-fade-up"
-          style={{ animationDelay: "0.4s" }}
+          style={{ animationDelay: "0.45s" }}
         />
 
         <p
-          className="mt-8 italic font-serif text-lg sm:text-2xl text-ivory animate-fade-up max-w-2xl"
+          className="mt-8 font-serif italic text-lg sm:text-2xl lg:text-3xl text-ivory animate-fade-up max-w-3xl"
           style={{ animationDelay: "0.6s" }}
         >
-          "Crafted for the modern royalty."
+          Built For Those Who Refuse To Be Ordinary
+        </p>
+
+        <p
+          className="mt-5 text-[10px] sm:text-xs text-ivory/70 uppercase tracking-luxe animate-fade-up"
+          style={{ animationDelay: "0.75s" }}
+        >
+          Luxury Streetwear &nbsp;•&nbsp; Timeless Identity &nbsp;•&nbsp; Modern Power
         </p>
 
         <div
           className="mt-12 flex flex-col sm:flex-row gap-5 animate-fade-up"
-          style={{ animationDelay: "0.8s" }}
+          style={{ animationDelay: "0.9s" }}
         >
           <a
             href="#story"
